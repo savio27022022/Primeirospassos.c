@@ -2,30 +2,33 @@
 #include<locale.h>
 int main(){//Início do Programa.
 setlocale(LC_ALL,"portuguese");//Comando para aceitar acentuações.
-int soma,subtracao;//Declarando as variáveis.
-int multiplicacao,divisao;
-int num1,num2;
+float soma,subtracao;//Declarando as variáveis.
+float multiplicacao,divisao;
+float primeiroNumero,segundoNumero;
 //Pedindo dados ao usuário.
-printf("\t\nDigite o 1º número:");
-scanf("%i",&num1);
+printf("\t\nDigite o primeiro número:");
+scanf("%f",&primeiroNumero);
 
-printf("\t\nDigite o 2º número:");
-scanf("%i",&num2);
+printf("\t\nDigite o segundo número:");
+scanf("%f",&segundoNumero);
 
 //Calculando as 4 operações.
-soma=num1+num2;
-subtracao=num1-num2;
-multiplicacao=num1*num2;
-divisao=num1/num2;
+soma=primeiroNumero+segundoNumero;
+subtracao=primeiroNumero-segundoNumero;
+multiplicacao=primeiroNumero*segundoNumero;
+divisao=primeiroNumero/segundoNumero;
 
-
+system(cls||clean);
+  
 
 //Exibindo o resultado.
 printf("\t\n===Resultado das 4 operações.");
-printf("\nSoma:%i",soma);
-printf("\nSubtração:%i",subtracao);
-printf("\nMultiplicação:%i",multiplicacao);
-printf("\nDivisão:%i",divisao);
+printf("\nSoma:%2.f",soma);
+printf("\nSubtração:%2.f",subtracao);
+printf("\nMultiplicação:%2.f",multiplicacao);
+printf("\nDivisão:%2.f",divisao);
+printf("\nPrimeiro Número:%2.f",primeiroNumero);
+printf("\nSegundo Número:'2.f",segundoNumero);
 return 0;
 }
 
