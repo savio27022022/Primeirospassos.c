@@ -1,27 +1,36 @@
+#include<stdlib.h>
 #include<stdio.h>
 #include<locale.h>
-int main(){//Início do Programa.
-setlocale(LC_ALL,"portuguese");//Comando para aceitar acentuações.
-float soma,subtracao;//Declarando as variáveis.
+
+void cabecalho(){
+printf("\n=== SENAI ===\n");
+system("cls||clear");
+}
+
+int main(){
+setlocale(LC_ALL,"portuguese");
+//Declarando  as Variáveis.
+float soma,subtracao;
 float multiplicacao,divisao;
 float primeiroNumero,segundoNumero;
 //Pedindo dados ao usuário.
+cabecalho();
 printf("\t\nDigite o primeiro número:");
 scanf("%f",&primeiroNumero);
-
+  
+cabecalho();
 printf("\t\nDigite o segundo número:");
 scanf("%f",&segundoNumero);
 
 //Calculando as 4 operações.
+cabecalho();
 soma=primeiroNumero+segundoNumero;
 subtracao=primeiroNumero-segundoNumero;
 multiplicacao=primeiroNumero*segundoNumero;
 divisao=primeiroNumero/segundoNumero;
 
-system(cls||clean);
-  
-
 //Exibindo o resultado.
+cabecalho();
 printf("\t\n===Resultado das 4 operações.");
 printf("\nSoma:%2.f",soma);
 printf("\nSubtração:%2.f",subtracao);
