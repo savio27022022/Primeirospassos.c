@@ -1,19 +1,29 @@
-#include <stdio.h>
-
+#include<stdio.h>
+#include<locale.h>
+#include<stdlib.h>
+void cabecalho(){
+printf("\n===SENAI====\n");
+system("cls||clear");  
+fflush(stdin);
+}
 int main() {
+setlocale(LC_ALL,"portuguese");
   // Declaração de variáveis
-  float salarioUsuario, salarioBase = 1412.00, numeroSalarios;
+  float salarioMínimo, salarioInformado = 1412.00,quantidadeSalarios;
 
-  // Solicitação do salário do usuário
+  // Solicitação do salário do usuário.
+  cabecalho();
   printf("Digite o valor do seu salário: R$ ");
-  scanf("%f", &salarioUsuario);
+  scanf("%f", &salarioInformado);
 
-  // Cálculo do número de salários
-  numeroSalarios = salarioUsuario / salarioBase;
+  ///Cálculo do número de salários.
+  cabecalho();
+  quantidadeSalarios=salarioInformado/salarioMinimo;
 
-  // Impressão do resultado
-  printf("Você ganha %.2f salários mínimos.\n", numeroSalarios);
-
+  ///Exibindo  o resultado.
+  cabecalho();
+  printf("Você ganha %.2f salários mínimos.\n",quantidadeSalarios);
+  
   return 0;
 }
 
