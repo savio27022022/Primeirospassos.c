@@ -1,37 +1,59 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+void cabecalho(){
+printf("\n === SENAI ====\n");
+system("cls||clear");
+}
 
 int main() {
+setlocale(LC_ALL,"portuguese");
+  
   // Declaração das variáveis
-  char nome[50];
+  char nome[200];
   int idade;
-  float nota1, nota2, nota3, nota4, media;
+  float primeiraNota,segundaNota,terceiraNota,media;
+  
 
-  // Solicitação do nome do aluno
-  printf("Digite o nome do aluno: ");
+  // Solicitação do nome do aluno.
+  cabecalho();
+  printf("Digite o seu nome: ");
   scanf("%s", nome);
 
-  // Solicitação da idade do aluno
+  // Solicitação da idade do aluno.
+  cabecalho();
   printf("Digite a idade do aluno: ");
   scanf("%d", &idade);
 
-  // Solicitação das notas do aluno
+  // Solicitação das notas do aluno.
+  cabecalho();
   printf("Digite a primeira nota: ");
-  scanf("%f", &nota1);
+  scanf("%f", primeiraNota);
+  
+  cabecalho();
   printf("Digite a segunda nota: ");
-  scanf("%f", &nota2);
+  scanf("%f", &segundaNota);
+  
+  cabecalho();
   printf("Digite a terceira nota: ");
-  scanf("%f", &nota3);
-  printf("Digite a quarta nota: ");
-  scanf("%f", &nota4);
+  scanf("%f", &terceiraNota);
+  
 
-  // Cálculo da média aritmética
-  media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-  // Exibição dos resultados
-  printf("\nNome: %s\n", nome);
-  printf("Idade: %d anos\n", idade);
-  printf("Notas: %.1f, %.1f, %.1f, %.1f\n", nota1, nota2, nota3, nota4);
-  printf("Média: %.1f\n", media);
+  // Cálculo da média aritmética.
+  cabecalho();
+  media = (primeiraNota+segundaNota+terceiraNota)/3;
+  
+  // Exibição dos resultados.
+  cabecalho();
+  printf("Nome: %s\n\n",nome);
+  printf("Idade: %d\n\n",idade);
+  printf("Primeira nota:%1.f,\n\n",primeiraNota);
+  printf("Segunda nota:%1.f,\n\n",segundaNota);
+  printf("Terceira nota:%1.f,\n\n",terceiraNota);
+  printf("Média:%1.f,\n\n",media);
+  
 
   return 0;
 }
